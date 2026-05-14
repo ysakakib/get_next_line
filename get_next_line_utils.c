@@ -6,7 +6,7 @@
 /*   By: yusakaki <yusakaki@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 00:03:01 by yusakaki          #+#    #+#             */
-/*   Updated: 2026/05/14 00:44:16 by yusakaki         ###   ########.fr       */
+/*   Updated: 2026/05/14 12:23:16 by yusakaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -201,9 +201,9 @@ char	*ft_strjoin(const char *s1, const char *s2)
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*res;
 	size_t	i;
 	size_t	s_len;
+	char	*res;
 
 	if (!s)
 		return (NULL);
@@ -224,3 +224,79 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	res[i] = '\0';
 	return (res);
 }
+
+// char	*ft_substr(char const *s, unsigned int start, size_t len)
+// {
+// 	size_t	i;
+// 	size_t	s_len;
+// 	char	*res;
+
+// 	if (!s)
+// 		return (NULL);
+// 	s_len = ft_strlen(s);
+// 	if (start >= s_len)
+// 		return (ft_strdup(""));
+// 	res = (char *)malloc(sizeof(char) * (len + 1));
+// 	if (len > s_len - start)
+// 		len = s_len - start;
+// 	i = 0;
+// 	while (i < len && s[start + i])
+// 	{
+// 		res[i] = s[start + i];
+// 		i++;
+// 	}
+// 	res[i] = '\0';
+// 	return (res);
+// }
+
+// char	*ft_substr(char const *s, unsigned int start, size_t len)
+// {
+// 	size_t	s_len;
+// 	char	*res;
+// 	size_t	i;
+
+// 	i = 0;
+// 	s_len = ft_strlen(s);
+// 	if (!s)
+// 		return (NULL);
+// 	if (start >= s_len)
+// 		return (ft_strdup(""));
+// 	if (len >= s_len - start)
+// 		s_len -= start;
+// 	res = (char *)malloc(sizeof(char) * (s_len + 1));
+// 	if (!res)
+// 		return (NULL);
+// 	while (i < len && s[start + i])
+// 	{
+// 		res[i] = s[start + i];
+// 		i++;
+// 	}
+// 	res[i] = '\0';
+// 	return (res);
+// }
+
+// char	*ft_substr(char const *s, unsigned int start, size_t len)
+// {
+// 	char	*res;
+// 	size_t	i;
+// 	size_t	s_len;
+
+// 	if (!s)
+// 		return (NULL);
+// 	s_len = ft_strlen(s);
+// 	if (start >= s_len)
+// 		return (ft_strdup(""));
+// 	if (len > s_len - start)
+// 		len = s_len - start;
+// 	res = (char *)malloc(sizeof(char) * (len + 1));
+// 	if (!res)
+// 		return (NULL);
+// 	i = 0;
+// 	while (i < len && s[start + i])
+// 	{
+// 		res[i] = s[start + i];
+// 		i++;
+// 	}
+// 	res[i] = '\0';
+// 	return (res);
+// }
